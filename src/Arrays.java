@@ -1,0 +1,46 @@
+public class Arrays {
+
+    public int[] nums;
+
+    public static void main(String[] args) {
+        System.out.println("welcome to awesome arrays");
+        new Arrays();
+
+    }
+    public Arrays(){
+
+        nums = new int[10];
+        nums[9] = 11;
+        nums[8] = 12;
+        nums[7] = 321;
+        nums[6] = 48;
+        nums[5] = 3;
+        nums[4] = 34;
+        nums[3] = 83;
+        nums[2] = 493;
+        nums[1] = 829;
+        nums[0] = 932;
+
+        for(int x = 0; x < nums.length; x++) {
+            nums[x] = (int)(Math.random()* 100)+1;
+            System.out.println(nums[x]);
+        }
+        displayArray();
+        sumArray();
+
+    }
+
+    public void displayArray(){
+        for(int x = 0; x < nums.length; x++){
+        System.out.println(x + ": " + nums[x]);
+        }
+    }
+
+    public void sumArray(){
+        int total = 0;
+        for(int x = 0; x < nums.length; x++){
+            total = total + nums[x];
+        }
+        System.out.println(total);
+    }
+}
