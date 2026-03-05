@@ -27,6 +27,9 @@ public class Arrays {
         }
         displayArray();
         sumArray();
+        averageNum();
+        maxNum();
+        minNum();
 
     }
 
@@ -43,4 +46,36 @@ public class Arrays {
         }
         System.out.println(total);
     }
+
+    public void averageNum(){
+        int avg = 0;
+        int total = 0;
+        for(int x = 0; x < nums.length; x++){
+            total = total + nums[x];
+            avg = (total/10);
+        }
+        System.out.println(avg);
+    }
+
+    public void maxNum(){
+        int max = nums[0];
+        for(int m = 1; m < nums.length; m++){
+            if(nums[m] > max){
+                max = nums[m];
+            }
+        }
+        System.out.println(max);
+    }
+
+    public void minNum(){
+        int max = nums[0];
+        for(int n = 1; n < nums.length; n++){
+            if(nums[n] < max){
+                max = nums[n];
+            }
+        }
+        System.out.println(max);
+    }
+
+
 }
